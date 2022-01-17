@@ -10,14 +10,35 @@ import UIKit
 class CardSelectionVC: UIViewController {
     
     let cardImageView   = UIImageView()
-    let stopButton      = CWButton(backgroundColor: .systemRed, title: "Stop!")
-    let resetButton     = CWButton(backgroundColor: .systemGreen, title: "Reset")
-    let rulesButton     = CWButton(backgroundColor: .systemBlue, title: "Rules")
+    let stopButton      = CWButton(color: .systemRed, title: "Stop!", systemImageName: "stop.circle")
+    let resetButton     = CWButton(color: .systemGreen, title: "Reset", systemImageName: "arrow.clockwise")
+    let rulesButton     = CWButton(color: .systemBlue, title: "Rules", systemImageName: "book")
 
+    var cards           = CardDeck.allValues
+    var timer: Timer!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         configureUI()
+        startTimer()
+    }
+    
+    func startTimer() {
+        timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(showRandomCard), userInfo: nil, repeats: true)
+    }
+    
+    @objc func stopTimer() {
+        timer.invalidate()
+    }
+    
+    @objc func resetTimer() {
+        stopTimer()
+        startTimer()
+    }
+    
+    @objc func showRandomCard() {
+        cardImageView.image = cards.randomElement()
     }
     
     func configureUI() {
@@ -42,6 +63,7 @@ class CardSelectionVC: UIViewController {
 
     func configureStopButton() {
         view.addSubview(stopButton)
+        stopButton.addTarget(self, action: #selector(stopTimer), for: .touchUpInside)
         
         NSLayoutConstraint.activate([
             stopButton.widthAnchor.constraint(equalToConstant: 260),
@@ -53,6 +75,7 @@ class CardSelectionVC: UIViewController {
     
     func configureResetButton() {
         view.addSubview(resetButton)
+        resetButton.addTarget(self, action: #selector(resetTimer), for: .touchUpInside)
         
         NSLayoutConstraint.activate([
             resetButton.widthAnchor.constraint(equalToConstant: 115),

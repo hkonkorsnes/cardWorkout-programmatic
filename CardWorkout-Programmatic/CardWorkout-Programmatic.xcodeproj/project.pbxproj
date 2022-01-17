@@ -14,6 +14,7 @@
 		4DB5D0DC2795E017009FFBAF /* CardSelectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB5D0DB2795E017009FFBAF /* CardSelectionVC.swift */; };
 		4DB5D0DE2795EA0F009FFBAF /* CWButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB5D0DD2795EA0F009FFBAF /* CWButton.swift */; };
 		4DB5D0E02796240A009FFBAF /* RulesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB5D0DF2796240A009FFBAF /* RulesVC.swift */; };
+		4DB5D0E227962DEE009FFBAF /* CardDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB5D0E127962DEE009FFBAF /* CardDeck.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		4DB5D0DB2795E017009FFBAF /* CardSelectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSelectionVC.swift; sourceTree = "<group>"; };
 		4DB5D0DD2795EA0F009FFBAF /* CWButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CWButton.swift; sourceTree = "<group>"; };
 		4DB5D0DF2796240A009FFBAF /* RulesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesVC.swift; sourceTree = "<group>"; };
+		4DB5D0E127962DEE009FFBAF /* CardDeck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDeck.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				4DB5D0DD2795EA0F009FFBAF /* CWButton.swift */,
 				4DB5D0DF2796240A009FFBAF /* RulesVC.swift */,
 				4DB5D0DB2795E017009FFBAF /* CardSelectionVC.swift */,
+				4DB5D0E127962DEE009FFBAF /* CardDeck.swift */,
 				4DB5D0D02795DCB8009FFBAF /* Assets.xcassets */,
 				4DB5D0D22795DCB8009FFBAF /* LaunchScreen.storyboard */,
 				4DB5D0D52795DCB8009FFBAF /* Info.plist */,
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DB5D0E227962DEE009FFBAF /* CardDeck.swift in Sources */,
 				4DB5D0C82795DCB7009FFBAF /* AppDelegate.swift in Sources */,
 				4DB5D0E02796240A009FFBAF /* RulesVC.swift in Sources */,
 				4DB5D0CA2795DCB7009FFBAF /* SceneDelegate.swift in Sources */,
